@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font: 16px/1.3 sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    height: 100vh;
+}
+
+.yellowBox {
+    background-color: rgb(241, 241, 135);
+    height: 80%;
+}
+
+.blueBox {
+    background-color: rgb(136, 136, 240);
+    height: 20%;
+}
+
+.greenBox {
+    background-color: rgb(139, 197, 139);
+    float: left;
+    height: 80%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+
+.yellowAndBlue {
+    background-color: rgb(151, 151, 238);
+    height: 80%;
+}
+
+.papuga {
+    width: 75%;
+    height: auto;
+}
+
+.carrot {
+    width: 50%;
+    height: auto;
+}
+
+footer {
+    height: 20%;
+    background-color: rgb(238, 104, 126);
+}
+
+.orangeBox {
+    background-color: orange;
+    float: left;
+    width: 80%;
+    height: 100%;
+}
+
+.pinkBox {
+    background-color: pink;
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
