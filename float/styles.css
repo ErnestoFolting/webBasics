@@ -18,11 +18,16 @@ body {
 .yellowBox {
     background-color: rgb(241, 241, 135);
     height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .blueBox {
     background-color: rgb(136, 136, 240);
     height: 20%;
+    display: flex;
+    align-items: center;
 }
 
 .greenBox {
@@ -61,6 +66,8 @@ footer {
     float: left;
     width: 80%;
     height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .pinkBox {

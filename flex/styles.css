@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
 }
 
@@ -8,67 +8,67 @@ body, html {
     height: 100%;
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-.threeBoxes{
-    flex:4;
+.threeBoxes {
+    flex: 4;
     display: flex;
 }
 
-footer{
-    flex:1;
+footer {
+    flex: 1;
     display: flex;
 }
 
-.greenBox{
+.greenBox {
     background-color: rgb(107, 207, 107);
-    flex:1;
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.twoBoxes{
-    flex:4;
+.twoBoxes {
+    flex: 4;
     display: flex;
     flex-direction: column;
 }
 
-.blueBox{
+.blueBox {
     background-color: rgb(107, 107, 218);
-    flex:1;
+    flex: 1;
     display: flex;
     align-items: center;
 }
 
-.yellowBox{
+.yellowBox {
     background-color: rgb(231, 231, 111);
-    flex:5;
+    flex: 5;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.orangeBox{
+.orangeBox {
     background-color: rgb(218, 174, 94);
-    flex:3;
+    flex: 3;
     display: flex;
     align-items: center;
 }
 
-.pinkBox{
+.pinkBox {
     background-color: rgb(236, 158, 170);
-    flex:1;
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-img{
-    width:75%;
-    height:auto;
+img {
+    width: 75%;
+    height: auto;
 }
