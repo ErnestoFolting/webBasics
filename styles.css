@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.threeBoxes {
+    flex: 4;
+    display: flex;
+}
+
+footer {
+    flex: 1;
+    display: flex;
+}
+
+.greenBox {
+    background-color: rgb(107, 207, 107);
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.twoBoxes {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+}
+
+.blueBox {
+    background-color: rgb(107, 107, 218);
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.yellowBox {
+    background-color: rgb(231, 231, 111);
+    flex: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.orangeBox {
+    background-color: rgb(218, 174, 94);
+    flex: 3;
+    display: flex;
+    align-items: center;
+}
+
+.pinkBox {
+    background-color: rgb(236, 158, 170);
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    width: 75%;
+    height: auto;
+}
