@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var table = document.getElementById("myTable");
   var currentPaletteColor = "blue";
 
-  var cellNumber = 5;
+  var cellNumber = 10;
 
   var colorInput = document.getElementById("colorInput");
   var colorPickerButton = document.getElementById("colorPickerButton");
