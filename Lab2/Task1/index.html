@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Input Form</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<script src="./script.js"></script>
+
+<body>
+    <form id="form">
+        <label for="fullname">ПІБ:</label><br>
+        <input id="fullname" name="fullname" type="text" placeholder="ПІБ"><br>
+
+        <label for="group">Група:</label><br>
+        <input id="group" name="group" type="text"><br>
+
+        <label for="phoneNumber">Телефон:</label><br>
+        <input id="phoneNumber" name="phoneNumber" type="text" placeholder="380123456789"><br>
+
+        <label for="address">Адреса:</label><br>
+        <input id="address" name="address" type="text" placeholder="м. Київ"><br>
+
+        <label for="email">e-mail:</label><br>
+        <input id="email" name="email" type="email" placeholder="name@gmail.com"><br>
+
+        <input id="submit-button" name="submit-button" type="submit" value="Submit"
+            onClick="return validateForm(this.form)">
+    </form>
+
+    <div id="success-message" style="display: none;">
+        Дякую за заповнення форми
+        <p id ="fullname-div"></p>
+        <p id ="group-div"></p>
+        <p id ="phoneNumber-div"></p>
+        <p id ="address-div"></p>
+        <p id ="email-div"></p>
+    </div>
+
+</body>
+
+</html>
