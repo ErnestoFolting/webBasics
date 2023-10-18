@@ -1,0 +1,54 @@
+*{
+    font-family:Arial, Helvetica, sans-serif;
+}
+.download-button{
+    background-color: rgb(113, 166, 247);
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.download-button:hover{
+    background-color: rgb(90, 92, 247);
+    cursor: pointer;
+}
+
+.person-div{
+    background-color: rgb(217, 225, 248);
+    border-radius: 15px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.people-grid{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(5, 300px) ;
+    column-gap: 15px;
+    row-gap: 10px;
+}
+
+.mock-div{
+    display: none;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+img{
+    margin: 20px;
+}
+
+.not-loading{
+    visibility: hidden;
+}
