@@ -1,10 +1,10 @@
-﻿namespace Chatty;
+﻿namespace Chatty.UserData;
 public class User
 {
     public string Username { get; set; }
     public string Password { get; set; }
     public string Name { get; set; }
-    public UserRolesEnum Role{ get; set; }
+    public UserRolesEnum Role { get; set; }
     public User()
     {
         Role = UserRolesEnum.user;

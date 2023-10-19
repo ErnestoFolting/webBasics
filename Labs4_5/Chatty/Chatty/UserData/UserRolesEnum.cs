@@ -1,4 +1,4 @@
-﻿namespace Chatty
+﻿namespace Chatty.UserData
 {
     public enum UserRolesEnum
     {

@@ -1,0 +1,10 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    background-color: rgb(213, 243, 211);
+    height: 450px;
+    width: 450px;
+}
