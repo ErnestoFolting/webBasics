@@ -1,16 +1,16 @@
-﻿using Chatty.UserData;
+﻿using Chatty_Backend.UserData;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace Chatty
+namespace Chatty_Backend
 {
     public class Helpers
     {
         public static string APP_URL;
         public static string JWT_SECRET;
-        public static string GenerateJwtToken(string username,UserRolesEnum role)
+        public static string GenerateJwtToken(string username, UserRolesEnum role)
         {
             var claims = new[]
             {

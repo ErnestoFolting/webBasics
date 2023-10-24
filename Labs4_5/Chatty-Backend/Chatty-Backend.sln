@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chatty", "Chatty\Chatty.csproj", "{6AAB6CF4-6C1B-44ED-859A-A4B4BCE8170C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chatty-Backend", "Chatty-Backend\Chatty-Backend.csproj", "{5A8507EE-DF85-4739-B381-F67F397EE213}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6AAB6CF4-6C1B-44ED-859A-A4B4BCE8170C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6AAB6CF4-6C1B-44ED-859A-A4B4BCE8170C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6AAB6CF4-6C1B-44ED-859A-A4B4BCE8170C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6AAB6CF4-6C1B-44ED-859A-A4B4BCE8170C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A8507EE-DF85-4739-B381-F67F397EE213}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A8507EE-DF85-4739-B381-F67F397EE213}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A8507EE-DF85-4739-B381-F67F397EE213}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A8507EE-DF85-4739-B381-F67F397EE213}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {FB1B5F7B-0FC6-41A4-9935-2C885551B236}
+		SolutionGuid = {5BFC9906-B544-46B2-80BA-30C3493F2E02}
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,20 @@
+[
+  {
+    "Username": "Admin1",
+    "Password": "42F749ADE7F9E195BF475F37A44CAFCB",
+    "Name": "Taras",
+    "Role": 0
+  },
+  {
+    "Username": "User1",
+    "Password": "42F749ADE7F9E195BF475F37A44CAFCB",
+    "Name": "Olena",
+    "Role": 1
+  },
+  {
+    "Username": "string",
+    "Password": "B45CFFE084DD3D20D928BEE85E7B0F21",
+    "Name": "string",
+    "Role": 1
+  }
+]

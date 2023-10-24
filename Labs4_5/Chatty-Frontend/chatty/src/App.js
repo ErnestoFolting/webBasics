@@ -1,6 +1,6 @@
 import { HubConnectionBuilder } from "@microsoft/signalr";
-import { useState, useEffect } from "react";
-const url = "https://localhost:7006";
+import { useState } from "react";
+import { url } from "./Store/store";
 
 let myHubConnection = null;
 

@@ -1,4 +1,4 @@
-﻿namespace Chatty.UserData
+﻿namespace Chatty_Backend.UserData
 {
     public class LoginData
     {

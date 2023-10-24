@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 
-namespace Chatty.Roles
+namespace Chatty_Backend.Roles
 {
     public class RoleAuthorizationHandler : AuthorizationHandler<RoleRequirement>
     {

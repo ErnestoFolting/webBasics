@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 
-namespace Chatty.Roles
+namespace Chatty_Backend.Roles
 {
     public class RoleRequirement : IAuthorizationRequirement
     {
