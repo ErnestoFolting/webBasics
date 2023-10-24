@@ -29,7 +29,7 @@ namespace Chatty_Backend.Controllers
             }
         }
 
-        [Authorize(Policy ="AdminPolicy")]
+        [Authorize]
         [HttpGet]
         public IEnumerable<User> Get()
         {
@@ -80,7 +80,16 @@ namespace Chatty_Backend.Controllers
                 if (loggedUser != null)
                 {
                     string token = Helpers.GenerateJwtToken(loggedUser.Username, loggedUser.Role);
-                    return Ok(token);
+
+                    var accessOption = new CookieOptions
+                    {
+                        HttpOnly = true,
+                        Expires = DateTime.UtcNow.AddDays(1),
+                        SameSite = SameSiteMode.None,
+                        Secure = true
+                    };
+                    Response.Cookies.Append("accessToken", token, accessOption);
+                    return Ok();
                 }
                 else
                 {
@@ -108,11 +117,36 @@ namespace Chatty_Backend.Controllers
             return BadRequest("User not found");
         }
 
+        [Authorize]
         [HttpPost]
         [Route("message")]
         public async Task SendMessage()
         {
             await _hub.SendMessage("user","messsage");
+        }
+
+        [Authorize]
+        [HttpPost]
+        [Route("checkAuth")]
+        public IActionResult checkAuth()
+        {
+            return Ok();
+        }
+
+        [Authorize]
+        [HttpPost]
+        [Route("logout")]
+        public IActionResult logout()
+        {
+            var cookieOption = new CookieOptions
+            {
+                HttpOnly = true,
+                Expires = DateTime.Now,
+                SameSite = SameSiteMode.None,
+                Secure = true
+            };
+            Response.Cookies.Append("accessToken", "", cookieOption);
+            return Ok();
         }
     }
 }

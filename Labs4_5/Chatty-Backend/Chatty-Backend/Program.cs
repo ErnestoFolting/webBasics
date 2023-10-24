@@ -13,21 +13,34 @@ Helpers.JWT_SECRET = builder.Configuration["JWT_SECRET"];
 
 var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT_SECRET"]));
 
-var tokenValidationParameters = new TokenValidationParameters
-{
-    ValidateIssuerSigningKey = true,
-    IssuerSigningKey = securityKey,
-    ValidateIssuer = false,
-    ValidateAudience = false,
-    ValidateLifetime = true,
-    ClockSkew = TimeSpan.Zero
-};
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddCookie(option =>
+{
+    option.Cookie.Name = "accessToken";
+})
     .AddJwtBearer(options =>
     {
+        options.SaveToken = true;
         options.RequireHttpsMetadata = false;
-        options.TokenValidationParameters = tokenValidationParameters;
+        options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidIssuer = Helpers.APP_URL,
+            ValidAudience = Helpers.APP_URL,
+            IssuerSigningKey = securityKey,
+            ValidateLifetime = true,
+            ClockSkew = TimeSpan.Zero
+        };
+        options.Events = new JwtBearerEvents
+        {
+            OnMessageReceived = context =>
+            {
+                context.Token = context.Request.Cookies["accessToken"];
+                return Task.CompletedTask;
+            }
+        };
     });
 
 builder.Services.AddAuthorization(options =>
@@ -45,8 +58,6 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Configuration.AddJsonFile("appsettings.json");
 
-builder.Services.AddSwaggerGen();
-
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("CORSPolicy",
@@ -62,12 +73,6 @@ builder.Services.AddCors(options =>
 
 
 var app = builder.Build();
-
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
 
 app.UseCors("CORSPolicy");
 

@@ -1,18 +1,16 @@
 import styles from "./Login.module.css";
-import $api from "../HTTP/index";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { observer } from "mobx-react-lite";
+import { Context } from "../..";
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 const Login = () => {
-  const [loginData, setLoginData] = useState({ username: "", password: ""});
+  const { store } = useContext(Context);
+  const [loginData, setLoginData] = useState({ username: "", password: "" });
 
   const loginRequest = async () => {
-    try {
-      const response = await $api.post("/Users",loginData);
-    } catch (e) {
-      alert(e.message);
-    }
+    store.login(loginData);
   };
 
   return (
@@ -36,7 +34,7 @@ const Login = () => {
         placeholder="Password"
         className={styles.loginFormField}
         value={loginData.password}
-        onChange={(e) =>  
+        onChange={(e) =>
           setLoginData((prevLoginData) => ({
             ...prevLoginData,
             password: e.target.value,
@@ -48,4 +46,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default observer(Login);

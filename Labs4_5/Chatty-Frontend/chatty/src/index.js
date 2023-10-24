@@ -1,13 +1,18 @@
-import React from "react";
+import { React, createContext } from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
 import "./index.css";
-import Login from "./Login/Login";
+import App from "./Components/App";
+import Store from "./Store/store";
+
+const store = new Store();
+
+export const Context = createContext({
+  store,
+});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  <Context.Provider value={{ store }}>
     <App />
-    <Login />
-  </React.StrictMode>
+  </Context.Provider>
 );

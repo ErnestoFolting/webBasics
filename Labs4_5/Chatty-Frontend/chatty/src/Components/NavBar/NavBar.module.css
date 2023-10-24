@@ -1,0 +1,37 @@
+.navBar {
+    min-height: 50px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(247, 242, 195);
+}
+.menu a {
+    margin-right: 0;
+    color: black;
+    margin: 40px;
+    text-decoration: none;
+}
+
+.mobile_btn {
+    display: none;
+}
+
+.menu a:hover {
+    color: rgb(177, 177, 177);
+    transition: 0.3s ease;
+}
+
+.navBar button {
+    color: rgb(90, 79, 79);
+    border: 1px solid rgb(90, 79, 79);
+    font-size: 13px;
+    padding: 5px;
+}
+
+.navBar button:hover {
+    cursor: pointer;
+    color: rgb(155, 150, 150);
+    border: 1px solid rgb(153, 149, 149);
+    transition: 0.3s ease;
+}
