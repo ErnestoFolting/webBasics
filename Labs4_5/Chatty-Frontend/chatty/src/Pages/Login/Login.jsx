@@ -14,7 +14,8 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className={styles.wrapper}>
+      <h1>Авторизація</h1>
       <input
         type="text"
         id="username-field"

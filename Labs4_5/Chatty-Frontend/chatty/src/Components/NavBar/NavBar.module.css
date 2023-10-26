@@ -1,11 +1,20 @@
 .navBar {
     min-height: 50px;
-    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(247, 242, 195);
+    background-color: rgb(250, 208, 238);
 }
+
+.navBar p {
+    margin-right: 20px;
+}
+
+.menu {
+    width: 70%;
+    text-align: end;
+}
+
 .menu a {
     margin-right: 0;
     color: black;
@@ -23,10 +32,13 @@
 }
 
 .navBar button {
-    color: rgb(90, 79, 79);
+    color: rgb(92, 94, 92);
     border: 1px solid rgb(90, 79, 79);
-    font-size: 13px;
+    height: 40px;
+    width: 80px;
+    font-size: 18px;
     padding: 5px;
+
 }
 
 .navBar button:hover {
@@ -34,4 +46,12 @@
     color: rgb(155, 150, 150);
     border: 1px solid rgb(153, 149, 149);
     transition: 0.3s ease;
+}
+
+.userData {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 15%;
 }

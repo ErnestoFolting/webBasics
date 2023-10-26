@@ -1,20 +1,14 @@
 [
   {
-    "Username": "Admin1",
+    "Username": "User",
     "Password": "42F749ADE7F9E195BF475F37A44CAFCB",
-    "Name": "Taras",
-    "Role": 0
+    "Name": "Danil",
+    "Role": 1
   },
   {
-    "Username": "User1",
+    "Username": "Admin",
     "Password": "42F749ADE7F9E195BF475F37A44CAFCB",
     "Name": "Olena",
-    "Role": 1
-  },
-  {
-    "Username": "string",
-    "Password": "B45CFFE084DD3D20D928BEE85E7B0F21",
-    "Name": "string",
-    "Role": 1
+    "Role": 0
   }
 ]

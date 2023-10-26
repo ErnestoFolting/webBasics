@@ -3,6 +3,7 @@ import AppRouter from "./AppRouter";
 import NavBar from "./NavBar/NavBar";
 import { useEffect, useContext } from "react";
 import { Context } from "..";
+import { observer } from "mobx-react-lite";
 const App = () => {
   const { store } = useContext(Context);
 
@@ -12,6 +13,15 @@ const App = () => {
     }
     checkAuth();
   }, []);
+
+  useEffect(() => {
+    async function createHubConnection() {
+      await store.createHubConnection();
+    }
+    if (store?.isAuth) {
+      createHubConnection();
+    }
+  }, [store?.isAuth]);
 
   return (
     <div className="wrapper">
@@ -23,4 +33,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default observer(App);

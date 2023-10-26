@@ -23,8 +23,17 @@ const NavBar = () => {
         <Link to="/chat">Чат</Link>
         <Link to="/users">Користувачі</Link>
       </div>
-      <div>
-        {store.isAuth && <button onClick={store.logout} style={{ boxShadow: 'none' }}>Вийти</button>}
+      <div className={s.userData}>
+        <p>
+          Привіт, <b>{store.username}</b>
+        </p>
+        <div>
+          {store.isAuth && (
+            <button onClick={store.logout} style={{ boxShadow: "none" }}>
+              Вийти
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );

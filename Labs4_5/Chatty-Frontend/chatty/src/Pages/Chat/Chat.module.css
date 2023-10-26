@@ -1,0 +1,69 @@
+.wrapper {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(250, 208, 238);
+    border-radius: 20px;
+    min-height: 600px;
+}
+
+.messages {
+    background-color: rgb(250, 208, 238);
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+    min-height: 600px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.users {
+    color: white;
+    background-color: rgb(133, 130, 130);
+    width: 20%;
+    padding: 20px;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.controls {
+    position: absolute;
+    right: 0;
+    left: 25%;
+    bottom: 0px;
+    padding: 10px;
+    width: 50%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(133, 130, 130);
+}
+
+.controls input,
+.controls button {
+    font-size: 16px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px;
+    margin: 5px;
+}
+
+.controls input {
+    width: 60%;
+}
+
+.controls input:focus {
+    outline: none;
+}
+
+
+.controls button {
+    background-color: rgb(250, 208, 238);
+    width: 100px;
+}
+
+.controls button:hover {
+    cursor: pointer;
+    background-color: rgb(253, 233, 247);
+}

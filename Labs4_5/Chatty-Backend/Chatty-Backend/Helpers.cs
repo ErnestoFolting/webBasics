@@ -14,7 +14,7 @@ namespace Chatty_Backend
         {
             var claims = new[]
             {
-                new Claim(JwtRegisteredClaimNames.Sub, username),
+                new Claim("user", username),
                 new Claim("role", Convert.ToString(role)),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };

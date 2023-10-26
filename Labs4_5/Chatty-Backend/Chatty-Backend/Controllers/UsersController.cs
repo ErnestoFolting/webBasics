@@ -17,10 +17,8 @@ namespace Chatty_Backend.Controllers
             try
             {
                 string usersFilePath = "data.json";
-
                 string jsonContent = System.IO.File.ReadAllText(usersFilePath);
                 var users = JsonConvert.DeserializeObject<List<User>>(jsonContent);
-
                 this.users = users;
             }
             catch (Exception ex)
@@ -89,7 +87,7 @@ namespace Chatty_Backend.Controllers
                         Secure = true
                     };
                     Response.Cookies.Append("accessToken", token, accessOption);
-                    return Ok();
+                    return Ok(loggedUser.Username);
                 }
                 else
                 {
@@ -106,8 +104,9 @@ namespace Chatty_Backend.Controllers
         [HttpDelete("{username}")]
         public async Task<IActionResult> Login(string username)
         {
+            string currentUserUsername = User.Claims.FirstOrDefault(claim => claim.Type == "user").Value;
             var userToDelete = users.Find(el => el.Username == username);
-            if (userToDelete != null)
+            if (userToDelete != null && username != currentUserUsername)
             {
                 users.Remove(userToDelete);
                 string updatedJson = JsonConvert.SerializeObject(users, Formatting.Indented);
@@ -122,7 +121,7 @@ namespace Chatty_Backend.Controllers
         [Route("message")]
         public async Task SendMessage()
         {
-            await _hub.SendMessage("user","messsage");
+            await _hub.SendMessage("messsage");
         }
 
         [Authorize]
@@ -130,11 +129,11 @@ namespace Chatty_Backend.Controllers
         [Route("checkAuth")]
         public IActionResult checkAuth()
         {
-            return Ok();
+            return Ok(User.Claims.FirstOrDefault(claim => claim.Type == "user").Value);
         }
 
         [Authorize]
-        [HttpPost]
+        [HttpPost]  
         [Route("logout")]
         public IActionResult logout()
         {

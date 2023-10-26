@@ -13,7 +13,6 @@ Helpers.JWT_SECRET = builder.Configuration["JWT_SECRET"];
 
 var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT_SECRET"]));
 
-
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddCookie(option =>
 {
