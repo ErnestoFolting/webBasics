@@ -39,6 +39,17 @@ export default class Store {
     }
   }
 
+  async register(registrationData) {
+    try {
+      const response = await $api.post("/Users/register", registrationData);
+      if (response?.status === 200) {
+        alert("Акаунт успішно зареєстровано");
+      }
+    } catch (e) {
+      alert(e);
+    }
+  }
+
   async logout() {
     try {
       this?.myHubConnection?.stop();
@@ -83,6 +94,7 @@ export default class Store {
   constructor() {
     makeAutoObservable(this);
     this.login = this.login.bind(this);
+    this.register = this.register.bind(this);
     this.checkAuth = this.checkAuth.bind(this);
     this.logout = this.logout.bind(this);
     this.createHubConnection = this.createHubConnection.bind(this);

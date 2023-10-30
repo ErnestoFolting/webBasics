@@ -1,8 +1,13 @@
 import s from "./User.module.css";
 import userImage from "../User/user.png";
 import $api from "../../HTTP";
+import { observer } from "mobx-react-lite";
+import { useContext } from "react";
+import { Context } from "../..";
 
 function User({ user, needUpdate, setNeedUpdate, ...props }) {
+  const { store } = useContext(Context);
+
   const deleteUser = async () => {
     try {
       await $api.delete("/users/" + user?.username);
@@ -18,11 +23,13 @@ function User({ user, needUpdate, setNeedUpdate, ...props }) {
       <p>Username: {user.username}</p>
       <p>Ім'я: {user.name}</p>
       <p>Роль: {user.role === 0 ? "admin" : "user"}</p>
-      <button onClick={deleteUser} className={s.deleteButton}>
-        Видалити
-      </button>
+      {store?.username === "Admin" && (
+        <button onClick={deleteUser} className={s.deleteButton}>
+          Видалити
+        </button>
+      )}
     </div>
   );
 }
 
-export default User;
+export default observer(User);

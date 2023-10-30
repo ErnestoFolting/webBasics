@@ -1,14 +1,14 @@
 [
   {
-    "Username": "User",
-    "Password": "42F749ADE7F9E195BF475F37A44CAFCB",
-    "Name": "Danil",
-    "Role": 1
-  },
-  {
     "Username": "Admin",
     "Password": "42F749ADE7F9E195BF475F37A44CAFCB",
     "Name": "Olena",
     "Role": 0
+  },
+  {
+    "Username": "User",
+    "Password": "42F749ADE7F9E195BF475F37A44CAFCB",
+    "Name": "Danil",
+    "Role": 1
   }
 ]

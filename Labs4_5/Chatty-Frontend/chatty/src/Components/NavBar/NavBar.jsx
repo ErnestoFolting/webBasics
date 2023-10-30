@@ -10,16 +10,17 @@ const NavBar = () => {
   if (!store.isAuth) {
     return (
       <div className={s.navBar}>
-        <h2 style={{ color: "rgb(109, 106, 105)" }}>
-          Будь ласка, для початку авторизуйтесь.
-        </h2>
+      <div className={s.menuRegistration}>
+        <Link to="/registration">Реєстрація</Link>
+        <Link to="/login">Логін</Link>
       </div>
+    </div>
     );
   }
 
   return (
     <div className={s.navBar}>
-      <div className={s.menu}>
+      <div className={s.menuLogin}>
         <Link to="/chat">Чат</Link>
         <Link to="/users">Користувачі</Link>
       </div>

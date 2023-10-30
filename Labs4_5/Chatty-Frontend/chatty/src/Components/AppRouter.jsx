@@ -5,6 +5,7 @@ import Users from "../Pages/Users/Users";
 import { observer } from "mobx-react-lite";
 import { useContext } from "react";
 import { Context } from "..";
+import Registration from "../Pages/Registration/Registration";
 
 const AppRouter = () => {
   const { store } = useContext(Context);
@@ -18,6 +19,7 @@ const AppRouter = () => {
   ) : (
     <Routes>
       <Route path="/login" element=<Login /> />
+      <Route path="/registration" element=<Registration /> />
       <Route path="*" element=<Navigate replace to="/login" /> />
     </Routes>
   );
