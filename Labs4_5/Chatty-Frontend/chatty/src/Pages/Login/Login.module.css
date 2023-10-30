@@ -1,0 +1,40 @@
+.loginFormField {
+    border: none;
+    border-bottom: 1px solid #3a3a3a;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    outline: none;
+    padding: 0px 0px 5px 5px;
+}
+
+.wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper input {
+    font-size: 20px;
+    width: 30%;
+    max-width: 380px;
+    height: 40px;
+}
+
+.wrapper button {
+    font-size: 20px;
+    width: 30%;
+    max-width: 380px;
+    height: 40px;
+    background-color: rgb(252, 203, 237);
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.wrapper button:hover {
+    cursor: pointer;
+    background-color: rgb(253, 228, 246);
+}
+
+.wrapper h1 {
+    color: rgb(73, 74, 75);
+}
